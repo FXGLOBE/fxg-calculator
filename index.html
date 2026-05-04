@@ -20,7 +20,7 @@
 .hlogo{display:flex;align-items:center;gap:14px}
 .hlogo img{height:44px;width:auto;display:block;background:transparent}
 .hsub{font-size:10px;color:rgba(255,255,255,0.45);font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
-.hcta{background:var(--or);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-family:var(--fn);font-size:12px;font-weight:800;cursor:pointer}
+.hcta{background:var(--or);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-family:var(--fn);font-size:12px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap}
 .rib{background:var(--s1);border-bottom:1px solid var(--bd);padding:0 24px;display:flex;align-items:stretch}
 .ri{display:flex;flex-direction:column;justify-content:center;padding:11px 18px;border-right:1px solid var(--bd)}
 .ri:last-child{border-right:none;flex:1}
@@ -132,6 +132,50 @@ select{background:transparent;border:none;outline:none;color:var(--tx);font-fami
 .alert-txt{font-size:12px;color:var(--sub);line-height:1.7}
 .ft{background:var(--navy);padding:11px 24px;display:flex;align-items:center;justify-content:space-between}
 .ftl{font-size:9px;color:rgba(255,255,255,0.28)}.ftr{font-size:9px;color:rgba(255,255,255,0.28)}
+
+/* ── MOBILE RESPONSIVE ──────────────────────────────────────── */
+@media(max-width:768px){
+  .hdr{padding:0 14px;height:auto;min-height:60px;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+  .hlogo{gap:8px;flex-wrap:wrap}
+  .hlogo img{height:32px}
+  .hpipe{display:none}
+  .hsub{font-size:9px;letter-spacing:0.05em}
+  .hcta{padding:8px 14px;font-size:11px}
+  .rib{overflow-x:auto;padding:0 10px}
+  .ri{padding:8px 10px;min-width:70px}
+  .rv{font-size:13px}
+  .rl{font-size:8px}
+  .ri-note{display:none}
+  .tabs{padding:0 10px;overflow-x:auto}
+  .tab{padding:10px 12px;font-size:10px;letter-spacing:0.1em;white-space:nowrap}
+  .panel{padding:14px 12px}
+  .igrid{grid-template-columns:repeat(3,1fr);gap:5px}
+  .ib .isym{font-size:10px}
+  .ib .icat{font-size:7px}
+  .ib .ispr{font-size:9px}
+  .ce-stats{grid-template-columns:repeat(2,1fr)}
+  .ig2{grid-template-columns:1fr}
+  .ig3{grid-template-columns:1fr}
+  .rg{grid-template-columns:repeat(2,1fr)}
+  .mp-row{flex-direction:column}
+  .ms{border-right:none;border-bottom:1px solid var(--bd);padding:6px 0}
+  .ms:last-child{border-bottom:none}
+  .wh-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .tw{overflow-x:auto}
+  .tw table{min-width:600px}
+  .ft{flex-direction:column;gap:6px;text-align:center;padding:10px 14px}
+  .cebox{padding:12px}
+  .ce-ex{padding:8px 10px}
+  .wh{padding:14px}
+}
+@media(max-width:420px){
+  .igrid{grid-template-columns:repeat(2,1fr)}
+  .rg{grid-template-columns:1fr}
+  .hlogo img{height:28px}
+  .hcta{font-size:10px;padding:7px 10px}
+}
+
 </style>
 
 <div id="W">
@@ -143,7 +187,7 @@ select{background:transparent;border:none;outline:none;color:var(--tx);font-fami
     <div class="hpipe"></div>
     <div class="hsub">Compound Calculator</div>
   </div>
-  <button class="hcta" onclick="openLink('https://portal.fxglobe.io/?_gl=1*1mxu90g*_gcl_au*MTg0NTA2ODUyMi4xNzc2ODUxMDEz')">Start Investing ↗</button>
+  <a href="https://portal.fxglobe.io/?_gl=1*1mxu90g*_gcl_au*MTg0NTA2ODUyMi4xNzc2ODUxMDEz" target="_blank" class="hcta">Start Investing ↗</a>
 </div>
 
 <div class="rib">
